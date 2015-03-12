@@ -1,3 +1,53 @@
+<php require_once "connect.php"; ?>
+<php require_once "submit.php"; ?>
+
+<?php 
+    
+    if(isset($_POST["submit"])) {
+        $name = ucfirst($_POST["name"]);
+        $description = ucfirst($_POST["description"]);
+        $location = ucfirst($_POST["location"]);
+        $rating = ucfirst($_POST["rating"]);
+    } else {
+        $name = "";
+        $description = ""; 
+        $location = ""; 
+        $rating = ""; 
+    }
+    
+?>
+    
+<?php
+    if(isset($_POST["submit"])) {
+        
+        if(empty($name)) {
+            $message = "Invalid name";
+        } else if(empty($description)) {
+            $message = "Invalid Description";
+        } else if(empty($location)) {
+            $message = "Invalid location";
+        }else if(empty($rating)) {
+            $message = "Please rate your activity";
+        } else {
+            $query = "INSERT INTO users (name, description, location, rating) VALUES ('{$name}', '{$description}', '{$location}', '{$rating}')";
+            $result = mysqli_query($connect, $query); 
+
+            if($result) {
+                $message = "Success, your post was added";   
+            } else {
+                $message = "Sorry, something went wrong"; 
+            }
+            
+            $name = "";
+            $description = ""; 
+            $location = ""; 
+            $rating = "";
+  
+        }
+    
+    }
+?> 
+
 <!doctype html>
 <html>
     <head>
@@ -39,30 +89,4 @@
 
         </div>
     </body>
-    
-    <?php 
-    
-    if(isset($_POST["submit"])) {
-        $name = ucfirst($_POST["name"]);
-        $description = ucfirst($_POST["description"]);
-        $city = ucfirst($_POST["location"]);
-        $gender = ucfirst($_POST["rating"]);
-    } else {
-        $name = "";
-        $description = ""; 
-        $location = ""; 
-        $rating = ""; 
-    }
-    
-?>
-
-<?php 
-    if(isset($_POST["submit"])) {
-        
-        if(empty($name)) {
-            $message = "Invalid name";
-        }
-    }
-?>
-
 </html>
