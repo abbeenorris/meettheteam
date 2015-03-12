@@ -21,11 +21,11 @@
         //Host
         $host = "localhost"; 
         //User
-        $user = "anorris"; 
+        $user = "ggriska"; 
         //Password
-        $password = "6wAdpSKU73c="; 
+        $password = "NxS8PjJr0Q8="; 
         //Database name
-        $db = "anorris";  
+        $db = "form";  
 
         $connect = mysqli_connect($host, $user, $password, $db); 
 
