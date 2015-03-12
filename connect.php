@@ -2,15 +2,17 @@
     //Host
     $host = "localhost"; 
     //User
-    $user = "anorris"; 
+    $user = "ggriska"; 
     //Password
-    $password = "6wAdpSKU73c="; 
+    $password = "NxS8PjJr0Q8="; 
     //Database name
-    $db = "anorris";  
+    $db = "ggriska";  
 
     $connect = mysqli_connect($host, $user, $password, $db); 
 
     if(mysqli_connect_errno()) {
         die(mysqli_connect_errno()); 
     }
+    
+    echo "conneted successfully";
 ?>
