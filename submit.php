@@ -25,7 +25,7 @@
         //Password
         $password = "NxS8PjJr0Q8="; 
         //Database name
-        $db = "form";  
+        $db = "ggriska";  
 
         $connect = mysqli_connect($host, $user, $password, $db); 
 
@@ -69,6 +69,6 @@
 
 <?php 
     if(isset($_POST["submit"])) {
-        mysqli_close($connect);
+        mysqli_close($connection);
     }
 ?>
