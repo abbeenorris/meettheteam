@@ -33,7 +33,7 @@
             die(mysqli_connect_errno()); 
         }
 
-        $query = "INSERT INTO users (name, description, location, rating) VALUES ('{$name}', '{$description}', '{$location}', '{$rating}')";
+        $query = "INSERT INTO form (name, description, location, rating) VALUES ('{$name}', '{$description}', '{$location}', '{$rating}')";
         $result = mysqli_query($connect, $query); 
 
         if($result) {
