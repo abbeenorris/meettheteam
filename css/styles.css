@@ -7,17 +7,26 @@
 }
 
 body {
-    background-image: url("../images/gate.jpg");
+    background-color: white;
     background-size: cover;
     font-family: Arial;
     padding-top: 60px;
 }
 
+
 .container {
-    width: 900px; 
+    width: 900px;
     margin-left: auto;
     margin-right: auto;
 }
+
+.day-box {
+	background:#e6f3ff;
+	border: 1px solid #5f66b8;
+	padding: 20px;
+	margin-bottom: 10px;
+}
+
 /*Everything surronding the boxes*/
 
 .nav {
@@ -28,21 +37,23 @@ body {
     opacity: 0.9;
     border: 2px solid black;
     border-radius: 2em;
+
 }
+/*Top navigation bar and box surrounding internal buttons*/
 
 .nav ul {
     display: inline-block;
-    list-style: none; 
+    list-style: none;
     padding: 0;
 }
-/*Top navigation bar and box surrounding internal buttons*/
+
 .nav ul li {
     float: left;
     margin-bottom: 15px;
 }
 
 .nav ul li a {
-    padding: 10px 20px; 
+    padding: 10px 20px;
     background: -webkit-linear-gradient(white, #FBFFFE);
     margin-right: 5px;
     color: #000;
@@ -59,25 +70,27 @@ body {
 .top-title {
     background: -webkit-linear-gradient(white, lightgrey);
     border: 3px solid black;
-    padding: 10px; 
+    padding: 10px;
     margin-bottom: 10px;
-    opacity: 0.8; 
+    opacity: 0.8;
     text-align: center;
     border-radius: 2em;
 }
 
 .box {
-    background: #89bae8;
+    background: white;
     float: left;
     margin-bottom: 15px;
     margin-top: 25px;
     border: 3px solid black;
+    border-radius: 0.5em;
     padding: 10px;
     opacity: 0.9;
 }
 
 .box:hover {
     border: 3px solid #000;
+
     opacity: 1.0;
 }
 
@@ -98,3 +111,23 @@ body {
 .clearfix {
     clear: both;
 }
+
+.login-box{
+  position: relative;
+  top: 50%;
+  left: 50%;
+  margin-top: 150px;
+  margin-left: -100px;
+
+}
+
+.register-box {
+   position: relative;
+  top: 50%;
+  left: 50%;
+  margin-top: 0px;
+  margin-left: -100px;
+
+
+}
+
