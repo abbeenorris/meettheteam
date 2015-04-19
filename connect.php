@@ -1,18 +1,15 @@
-<?php 
-    //Host
-    $host = "localhost"; 
-    //User
-    $user = "ggriska"; 
-    //Password
-    $password = "NxS8PjJr0Q8="; 
-    //Database name
-    $db = "ggriska";  
+<?php
+    define("DB_SERVER", "localhost");
+    define("DB_USER", "ggriska");
+    define("DB_PASS", "NxS8PjJr0Q8=");
+    define("DB_NAME", "ggriska");
 
-    $connect = mysqli_connect($host, $user, $password, $db); 
+    $connection = mysqli_connect(DB_SERVER, DB_USER, DB_PASS, DB_NAME);
 
     if(mysqli_connect_errno()) {
-        die(mysqli_connect_errno()); 
+        die("Database connection failed: " .
+        mysqli_connect_error() .
+        " (" . mysqli_connect_errno() . ")"
+        );
     }
-    
-    echo "conneted successfully";
 ?>
