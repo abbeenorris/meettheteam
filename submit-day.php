@@ -59,14 +59,16 @@ $rowcount = mysqli_num_rows($result);
         <div class="top-title">
             <h1>Submit your day out!</h1>
         </div>
-
-          <div class="container">
-
+        
+        <div class="title">
+            <p>Submit your day out! 
+ On this page you can do our job and submit your favourite day out! Please complete the form below and include a price to let our users enjoy your fun filled days out!</p>
+        <div class="form">
             <form action="submit-day.php" method="post">
-                Name: <input type="text" name="name" value="" />
-                Description: <input type="text" name="description" value="" />
+                Please Name activity: <input type="text" name="name" value="" />
+                Describe your activity: <input type="text" name="description" value="" />
                 Location: <input type="text" name="location" value="" />
-                Rating: <select name="rating">
+                Please rate activity: <select name="rating">
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
@@ -75,9 +77,17 @@ $rowcount = mysqli_num_rows($result);
                         </select>
                 <input type="submit" name="submit" value="Submit" />
             </form>
+              </div> 
 
+
+              <?php
+                    if(isset($message)) {
+                        echo $message;
+                    }
+                ?>
 
             <div>
+                
 
 	            <?php
 		        	if ($rowcount > 0) {
@@ -90,7 +100,7 @@ $rowcount = mysqli_num_rows($result);
 					<p><?php echo $row["location"]; ?></p>
 					<p><?php echo $row["rating"]; ?></p>
 					<?php if($row["rating"] == 5) { ?>
-						<img src="images/stars.png">
+						<img src="images/stars.jpg">
 					<?php } ?>
 
 				</div>
