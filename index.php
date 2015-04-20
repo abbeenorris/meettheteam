@@ -3,7 +3,10 @@
 <?php require_once("../includes/functions.php"); ?>
 <?php include_once("../includes/templates/header.php"); ?>
 
+
 <?php if(isset($_SESSION["username"])) { ?>
+
+
 	<form action="submit-day.php" method="post">
 	    Name: <input type="text" name="name" value="" />
 	    Description: <input type="text" name="description" value="" />
@@ -20,6 +23,7 @@
 	<a href="logout.php">Logout</a>
 <?php } else { ?>
 	<div class="login-box">
+        <h1>Login</h1>
 	    <form action="login.php" method="post">
 	        <p>Username:</p> <input type="text" name="username" value=""><br>
 	        <p>Password:</p> <input type="password" name="password" value=""><br>
